@@ -7,7 +7,7 @@
 
 using std::vector;
 
-int Solution::removeDuplicates(vector<int> &nums) {
+int remove_duplicates::Solution::removeDuplicates(vector<int> &nums) {
     if (nums.empty()) {
         return 0;
     }
