@@ -10,4 +10,4 @@ add_executable(leetcode main.cpp
         remove_duplicates_2.cpp remove_duplicates_2.h
         majority_element.cpp majority_element.h
         rotate_array.cpp rotate_array.h
-        best_time_to_buy_sell_stock.cpp best_time_to_buy_sell_stock.h best_time_to_buy_sell_stock_2.cpp best_time_to_buy_sell_stock_2.h jump_game.cpp jump_game.h)
+        best_time_to_buy_sell_stock.cpp best_time_to_buy_sell_stock.h best_time_to_buy_sell_stock_2.cpp best_time_to_buy_sell_stock_2.h jump_game.cpp jump_game.h jump_game_2.cpp jump_game_2.h)
