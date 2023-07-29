@@ -15,6 +15,8 @@ int gas_station::Solution::canCompleteCircuit(std::vector<int> &gas, std::vector
     }
     if (tank < 0) {
         return -1;
+    } else if (min >= 0) {
+        return 0;
     } else {
         return (index + 1) % gas.size();
     }
