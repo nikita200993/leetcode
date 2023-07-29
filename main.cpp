@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
-#include "rotate_array.h"
+#include "gas_station.h"
 
 using std::vector;
 
-using rotate_array::Solution;
+using gas_station::Solution;
 
 template<typename T>
 void print(const vector<T> &vec);
@@ -101,8 +101,10 @@ public:
 
 
 int main() {
-    auto a = Derived{};
-    auto b = std::move(a);
+    auto gas = vector<int>{2,3,4};
+    auto cost = vector<int>{3,4,3};
+    int result = Solution().canCompleteCircuit(gas, cost);
+    std::cout << result << std::endl;
 }
 
 template<typename T>
