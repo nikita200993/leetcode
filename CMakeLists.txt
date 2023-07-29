@@ -14,4 +14,4 @@ add_executable(leetcode main.cpp
         best_time_to_buy_sell_stock_2.cpp best_time_to_buy_sell_stock_2.h
         jump_game.cpp jump_game.h
         jump_game_2.cpp jump_game_2.h
-        h_index.cpp h_index.h RandomizedSet.cpp RandomizedSet.h)
+        h_index.cpp h_index.h RandomizedSet.cpp RandomizedSet.h product_of_array.cpp product_of_array.h)
