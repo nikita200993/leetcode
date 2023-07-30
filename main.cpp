@@ -1,28 +1,118 @@
 #include <iostream>
 #include <vector>
-#include "RandomizedSet.h"
+#include "gas_station.h"
 
 using std::vector;
 
+using gas_station::Solution;
 
-template <typename T>
+template<typename T>
 void print(const vector<T> &vec);
 
-int main() {
-    auto set = randomized_set::RandomizedSet();
-    set.insert(1);
-    set.remove(2);
-    set.insert(2);
-    std::cout << set.getRandom() << std::endl;
-    set.remove(1);
-    set.insert(2);
-    std::cout << set.getRandom() << std::endl;
-    return 0;
+class A {
+public:
+    A() {
+        std::cout << "created" << std::endl;
+    }
+
+    ~A() {
+        std::cout << "goodbye" << std::endl;
+    }
+};
+
+template<typename Type>
+class TD;
+
+template<typename A, size_t B>
+int size(A(&)[B]) {
+    return B;
 }
 
-template <typename T>
+
+class Kek {
+    friend void swap(Kek &l, Kek &r);
+
+public:
+    Kek() = delete;
+
+    Kek(Kek &&kek) noexcept: a(kek.a), moved(false) {
+        std::cout << "move constructor" << std::endl;
+        kek.moved = true;
+    };
+
+    Kek(int a) : a(a) {
+        std::cout << "int constructor" << std::endl;
+    };
+
+    Kek &operator=(Kek &&kek) noexcept {
+        std::cout << "move assign" << std::endl;
+        this->a = kek.a;
+        kek.moved = true;
+        this->moved = false;
+        return *this;
+    };
+
+    Kek &operator=(const Kek &kek) noexcept {
+        std::cout << "copy assign" << std::endl;
+        this->a = kek.a;
+        return *this;
+    };
+
+    ~Kek() {
+        if (!this->moved) {
+            std::cout << "kek destructor" << std::endl;
+        }
+    }
+
+    [[nodiscard]] int getA() const {
+        return this->a;
+    }
+
+private:
+    int a;
+    bool moved{false};
+};
+
+void swap(Kek &l, Kek &r) {
+    std::cout << "swap" << std::endl;
+    std::swap(l.a, r.a);
+    std::swap(l.moved, r.moved);
+}
+
+class Base {
+public:
+    virtual ~Base() {
+        std::cout << "base destructor" << std::endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    ~Derived() override {
+        std::cout << "derived destructor" << std::endl;
+    };
+
+    Derived() {};
+
+    Derived(Derived &&rhs) {
+
+    };
+};
+
+
+int main() {
+    auto gas = vector<int>{2,3,4};
+    auto cost = vector<int>{3,4,3};
+    int result = Solution().canCompleteCircuit(gas, cost);
+    std::cout << result << std::endl;
+}
+
+template<typename T>
 void print(const vector<T> &vec) {
-    for (auto &element : vec) {
+    for (auto &element: vec) {
         std::cout << element << std::endl;
     }
 }
+
+
+
