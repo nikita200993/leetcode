@@ -1,18 +1,22 @@
 #include <iostream>
 #include <vector>
-#include "rotate_array.h"
+#include "RandomizedSet.h"
 
 using std::vector;
 
-using rotate_array::Solution;
 
 template <typename T>
 void print(const vector<T> &vec);
 
 int main() {
-    auto left = vector<int>({1, 2, 3, 4, 5});
-    Solution().rotate(left, 4);
-    print(left);
+    auto set = randomized_set::RandomizedSet();
+    set.insert(1);
+    set.remove(2);
+    set.insert(2);
+    std::cout << set.getRandom() << std::endl;
+    set.remove(1);
+    set.insert(2);
+    std::cout << set.getRandom() << std::endl;
     return 0;
 }
 

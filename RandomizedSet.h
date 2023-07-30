@@ -3,6 +3,7 @@
 
 #include <unordered_map>
 #include <vector>
+#include <random>
 
 namespace randomized_set {
 
@@ -15,6 +16,7 @@ namespace randomized_set {
     private:
         std::unordered_map<int, int> map;
         std::vector<int> vec;
+        std::random_device dev;
     };
 } // randomized_set
 

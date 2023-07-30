@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include "majority_element.h"
 
 
