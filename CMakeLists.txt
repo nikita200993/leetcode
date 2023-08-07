@@ -14,4 +14,11 @@ add_executable(leetcode main.cpp
         best_time_to_buy_sell_stock_2.cpp best_time_to_buy_sell_stock_2.h
         jump_game.cpp jump_game.h
         jump_game_2.cpp jump_game_2.h
-        h_index.cpp h_index.h RandomizedSet.cpp RandomizedSet.h product_of_array.cpp product_of_array.h gas_station.cpp gas_station.h candy.cpp candy.h trapping_rain_water.cpp trapping_rain_water.h)
+        h_index.cpp h_index.h
+        RandomizedSet.cpp RandomizedSet.h
+        product_of_array.cpp product_of_array.h
+        gas_station.cpp gas_station.h
+        candy.cpp candy.h
+        trapping_rain_water.cpp trapping_rain_water.h
+        roman_to_int.cpp roman_to_int.h
+        int_to_roman.cpp int_to_roman.h length_of_last_word.cpp length_of_last_word.h common_prefix.cpp common_prefix.h)
