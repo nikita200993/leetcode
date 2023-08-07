@@ -1,110 +1,64 @@
 #include <iostream>
 #include <vector>
-#include "gas_station.h"
+#include "candy.h"
 
 using std::vector;
-
-using gas_station::Solution;
-
-template<typename T>
-void print(const vector<T> &vec);
-
-class A {
-public:
-    A() {
-        std::cout << "created" << std::endl;
-    }
-
-    ~A() {
-        std::cout << "goodbye" << std::endl;
-    }
-};
 
 template<typename Type>
 class TD;
 
-template<typename A, size_t B>
-int size(A(&)[B]) {
-    return B;
-}
 
-
-class Kek {
-    friend void swap(Kek &l, Kek &r);
-
+class Field {
 public:
-    Kek() = delete;
+    int b;
+};
 
-    Kek(Kek &&kek) noexcept: a(kek.a), moved(false) {
-        std::cout << "move constructor" << std::endl;
-        kek.moved = true;
-    };
+class Mov {
+public:
 
-    Kek(int a) : a(a) {
-        std::cout << "int constructor" << std::endl;
-    };
+    Mov() = default;
 
-    Kek &operator=(Kek &&kek) noexcept {
-        std::cout << "move assign" << std::endl;
-        this->a = kek.a;
-        kek.moved = true;
-        this->moved = false;
-        return *this;
-    };
-
-    Kek &operator=(const Kek &kek) noexcept {
-        std::cout << "copy assign" << std::endl;
-        this->a = kek.a;
-        return *this;
-    };
-
-    ~Kek() {
-        if (!this->moved) {
-            std::cout << "kek destructor" << std::endl;
-        }
+    Mov(Mov &&mov) {
+        std::cout << "move constr" << std::endl;
     }
 
-    [[nodiscard]] int getA() const {
-        return this->a;
+    Mov &operator=(Mov &&mov) {
+        std::cout << "move assign" << std::endl;
+    }
+};
+
+std::ostream &operator<<(std::ostream &stream, const Mov &mov) {
+    return stream << "mov";
+}
+
+template<class Cl>
+class E {
+public:
+    explicit E(Cl &&cl) : ref(std::forward<Cl>(cl)) {
+    };
+
+    decltype(auto) head() {
+        return std::move(ref[0]);
     }
 
 private:
-    int a;
-    bool moved{false};
+    Cl &&ref;
 };
 
-void swap(Kek &l, Kek &r) {
-    std::cout << "swap" << std::endl;
-    std::swap(l.a, r.a);
-    std::swap(l.moved, r.moved);
+template<class A>
+void lol(A a) {
+    TD<A> b;
 }
 
-class Base {
-public:
-    virtual ~Base() {
-        std::cout << "base destructor" << std::endl;
-    }
-};
-
-class Derived : public Base {
-public:
-    ~Derived() override {
-        std::cout << "derived destructor" << std::endl;
-    };
-
-    Derived() {};
-
-    Derived(Derived &&rhs) {
-
-    };
-};
-
+template<typename Container>
+decltype(auto) head(Container &&ref) {
+    return std::forward<Container>(ref)[0];
+}
 
 int main() {
-    auto gas = vector<int>{2,3,4};
-    auto cost = vector<int>{3,4,3};
-    int result = Solution().canCompleteCircuit(gas, cost);
-    std::cout << result << std::endl;
+    int x = 3;
+    auto &&a = head(vector<int>{1, 2, 3});
+
 }
 
 template<typename T>
