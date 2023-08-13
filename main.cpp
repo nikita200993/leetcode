@@ -1,6 +1,5 @@
 #include <iostream>
-#include <vector>
-#include "common_prefix.h"
+#include "reverse_words_string.h"
 
 using std::vector;
 
@@ -9,11 +8,8 @@ class TD;
 
 
 int main() {
-    auto vec = vector<std::string>();
-    vec.emplace_back("flower");
-    vec.emplace_back("flow");
-    vec.emplace_back("flight");
-    auto result = common_prefix::Solution().longestCommonPrefix(vec);
+    auto str = std::string(" asdasd df f");
+    auto result = reverse_words_string::Solution().reverseWords(str);
     std::cout << result << std::endl;
 }
 
