@@ -23,4 +23,7 @@ add_executable(leetcode main.cpp
         roman_to_int.cpp roman_to_int.h
         int_to_roman.cpp int_to_roman.h
         length_of_last_word.cpp length_of_last_word.h
-        common_prefix.cpp common_prefix.h reverse_words_string.cpp reverse_words_string.h zig_zag.cpp zig_zag.h)
+        common_prefix.cpp common_prefix.h
+        reverse_words_string.cpp reverse_words_string.h
+        zig_zag.cpp zig_zag.h
+        find_substring.cpp find_substring.h text_justification.cpp text_justification.h palindrom.cpp palindrom.h subsequence.cpp subsequence.h two_sum_2_sorted.cpp two_sum_2_sorted.h)

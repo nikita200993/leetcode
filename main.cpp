@@ -1,16 +1,20 @@
 #include <iostream>
-#include "zig_zag.h"
+#include "palindrom.h"
 
 using std::vector;
+using std::string;
 
 template<typename Type>
 class TD;
 
+template<typename T>
+void print(const vector<T> &vec);
+
 
 int main() {
-    auto str = std::string("PAYPALISHIRING");
-    auto result = zig_zag::Solution().convert(str, 4);
-    std::cout << result << std::endl;
+    auto str = string("");
+    auto result = palindrom::Solution().isPalindrome();
+    print(result);
 }
 
 template<typename T>
