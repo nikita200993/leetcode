@@ -1,5 +1,5 @@
 #include <iostream>
-#include "reverse_words_string.h"
+#include "zig_zag.h"
 
 using std::vector;
 
@@ -8,8 +8,8 @@ class TD;
 
 
 int main() {
-    auto str = std::string(" asdasd df f");
-    auto result = reverse_words_string::Solution().reverseWords(str);
+    auto str = std::string("PAYPALISHIRING");
+    auto result = zig_zag::Solution().convert(str, 4);
     std::cout << result << std::endl;
 }
 
