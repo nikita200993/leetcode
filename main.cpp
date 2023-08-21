@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "min_subarray_sub.h"
+#include "min_window_substring.h"
 
 using std::vector;
 using std::string;
@@ -16,8 +16,9 @@ void print(const vector<vector<T>> &vec);
 
 
 int main() {
-    auto vec = vector({1,4,4});
-    auto result = min_subarray_sub::Solution().minSubArrayLen(4, vec);
+    auto t = string("cae");
+    auto s = string("cfabeca");
+    auto result = min_window_substring::Solution().minWindow(s, t);
     std::cout << result << std::endl;
 }
 
