@@ -26,4 +26,4 @@ add_executable(leetcode main.cpp
         common_prefix.cpp common_prefix.h
         reverse_words_string.cpp reverse_words_string.h
         zig_zag.cpp zig_zag.h
-        find_substring.cpp find_substring.h text_justification.cpp text_justification.h palindrom.cpp palindrom.h subsequence.cpp subsequence.h two_sum_2_sorted.cpp two_sum_2_sorted.h container_with_most_water.cpp container_with_most_water.h three_sum.cpp three_sum.h min_subarray_sub.cpp min_subarray_sub.h)
+        find_substring.cpp find_substring.h text_justification.cpp text_justification.h palindrom.cpp palindrom.h subsequence.cpp subsequence.h two_sum_2_sorted.cpp two_sum_2_sorted.h container_with_most_water.cpp container_with_most_water.h three_sum.cpp three_sum.h min_subarray_sub.cpp min_subarray_sub.h longest_substring_without_repeat.cpp longest_substring_without_repeat.h)
