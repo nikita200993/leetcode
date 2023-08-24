@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "min_window_substring.h"
+#include "spiral.h"
 
 using std::vector;
 using std::string;
@@ -16,10 +16,9 @@ void print(const vector<vector<T>> &vec);
 
 
 int main() {
-    auto t = string("cae");
-    auto s = string("cfabeca");
-    auto result = min_window_substring::Solution().minWindow(s, t);
-    std::cout << result << std::endl;
+    vector<vector<int>> vec = {{2,5},{8,4},{0,-1}};
+    auto result = spiral::Solution().spiralOrder(vec);
+    print(result);
 }
 
 template<typename T>
