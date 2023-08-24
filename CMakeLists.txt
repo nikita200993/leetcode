@@ -26,4 +26,16 @@ add_executable(leetcode main.cpp
         common_prefix.cpp common_prefix.h
         reverse_words_string.cpp reverse_words_string.h
         zig_zag.cpp zig_zag.h
-        find_substring.cpp find_substring.h text_justification.cpp text_justification.h palindrom.cpp palindrom.h subsequence.cpp subsequence.h two_sum_2_sorted.cpp two_sum_2_sorted.h container_with_most_water.cpp container_with_most_water.h three_sum.cpp three_sum.h min_subarray_sub.cpp min_subarray_sub.h longest_substring_without_repeat.cpp longest_substring_without_repeat.h substring_with_concat.cpp substring_with_concat.h min_window_substring.cpp min_window_substring.h sudoku.cpp sudoku.h spiral.cpp spiral.h)
+        find_substring.cpp find_substring.h
+        text_justification.cpp text_justification.h
+        palindrom.cpp palindrom.h
+        subsequence.cpp subsequence.h
+        two_sum_2_sorted.cpp two_sum_2_sorted.h
+        container_with_most_water.cpp container_with_most_water.h
+        three_sum.cpp three_sum.h
+        min_subarray_sub.cpp min_subarray_sub.h
+        longest_substring_without_repeat.cpp longest_substring_without_repeat.h
+        substring_with_concat.cpp substring_with_concat.h
+        min_window_substring.cpp min_window_substring.h
+        sudoku.cpp sudoku.h
+        spiral.cpp spiral.h rotate_matrix.cpp rotate_matrix.h set_matrix_zero.cpp set_matrix_zero.h game_of_life.cpp game_of_life.h ransom_note.cpp ransom_note.h isomorphic_string.cpp isomorphic_string.h word_pattern.cpp word_pattern.h)

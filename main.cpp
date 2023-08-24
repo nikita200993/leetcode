@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "spiral.h"
+#include "word_pattern.h"
 
 using std::vector;
 using std::string;
@@ -16,9 +16,9 @@ void print(const vector<vector<T>> &vec);
 
 
 int main() {
-    vector<vector<int>> vec = {{2,5},{8,4},{0,-1}};
-    auto result = spiral::Solution().spiralOrder(vec);
-    print(result);
+    auto pattern = string("abab");
+    auto s = string("chicken beef chicken beef");
+    auto result = word_pattern::Solution().wordPattern(pattern, s);
 }
 
 template<typename T>

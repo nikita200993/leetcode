@@ -18,9 +18,7 @@ vector<int> spiral::Solution::spiralOrder(vector<vector<int>> &matrix) {
         result.push_back(matrix[i][j]);
         if (i <= centerY && j <= centerX) {
             int order = std::min(i, j) + 1;
-            if (i == order - 1) {
-                j++;
-            } else if (i == order) {
+            if (i == order - 1 || i == order) {
                 j++;
             } else {
                 i--;
